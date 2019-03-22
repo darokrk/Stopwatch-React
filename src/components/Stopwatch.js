@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./Stopwatch.css";
 
 const Stopwatch = props => {
-  return <div>{props.timeDisplay()}</div>;
+  return <div className={styles.stopwatch}>{props.timeDisplay()}</div>;
 };
 
 export default Stopwatch;

@@ -25,6 +25,7 @@ class App extends Component {
     this.resetWatch = this.resetWatch.bind(this);
     this.result = this.result.bind(this);
     this.clear = this.clear.bind(this);
+    this.pad0 = this.pad0.bind(this);
   }
 
   print() {
@@ -36,10 +37,19 @@ class App extends Component {
     let minutes = this.state.times.minutes;
     let seconds = this.state.times.seconds;
     let milliseconds = this.state.times.milliseconds;
-    return `${pad0(minutes)}:${pad0(seconds)}:${pad0(
+    return `${this.pad0(minutes)}:${this.pad0(seconds)}:${this.pad0(
       Math.floor(milliseconds)
     )}`;
   }
+
+  pad0(value) {
+    let result = value.toString();
+    if (result.length < 2) {
+      result = `0 + ${result}`;
+    }
+    return result;
+  }
+
   start() {
     const running = this.state.running;
     if (!running) {
@@ -120,12 +130,12 @@ class App extends Component {
   }
 }
 
-function pad0(value) {
-  let result = value.toString();
-  if (result.length < 2) {
-    result = `0 + ${result}`;
-  }
-  return result;
-}
+// function pad0(value) {
+//   let result = value.toString();
+//   if (result.length < 2) {
+//     result = `0 + ${result}`;
+//   }
+//   return result;
+// }
 
 export default App;

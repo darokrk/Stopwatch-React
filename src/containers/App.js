@@ -21,8 +21,8 @@ class App extends Component {
     this.start = this.start.bind(this);
     this.step = this.step.bind(this);
     this.calculate = this.calculate.bind(this);
+    this.pause = this.pause.bind(this);
     this.stop = this.stop.bind(this);
-    this.resetWatch = this.resetWatch.bind(this);
     this.result = this.result.bind(this);
     this.clear = this.clear.bind(this);
     this.pad0 = this.pad0.bind(this);
@@ -116,18 +116,29 @@ class App extends Component {
     });
   }
 
-  stop() {
+  pause() {
     this.setState({
       running: false
     });
     clearInterval(this.watch);
   }
 
+  stop() {
+    this.setState({
+      running: false,
+      times: {
+        minutes: 0,
+        seconds: 0,
+        milliseconds: 0
+      }
+    });
+  }
+
   render() {
     return (
       <div className={styles.container}>
         <Button text={"Start"} handleClick={this.start} />
-        <Button text={"Pause"} />
+        <Button text={"Pause"} handleClick={this.pause} />
         <Button text={"Stop"} handleClick={this.stop} />
         <div>{this.format()}</div>
         <Button text={"Result"} />

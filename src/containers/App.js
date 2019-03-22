@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "../components/Button";
+import styles from "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <Button text={"Start"} />
         <Button text={"Pause"} />
         <Button text={"Stop"} />

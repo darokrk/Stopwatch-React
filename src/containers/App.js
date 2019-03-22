@@ -126,9 +126,9 @@ class App extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Button text={"Start"} handleStart={this.start} />
+        <Button text={"Start"} handleClick={this.start} />
         <Button text={"Pause"} />
-        <Button text={"Stop"} />
+        <Button text={"Stop"} handleClick={this.stop} />
         <div>{this.format()}</div>
         <Button text={"Result"} />
         <Button text={"Clear"} />

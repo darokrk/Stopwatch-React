@@ -45,7 +45,7 @@ class App extends Component {
   pad0(value) {
     let result = value.toString();
     if (result.length < 2) {
-      result = `0 + ${result}`;
+      result = `0${result}`;
     }
     return result;
   }
@@ -116,6 +116,13 @@ class App extends Component {
     });
   }
 
+  stop() {
+    this.setState({
+      running: false
+    });
+    clearInterval(this.watch);
+  }
+
   render() {
     return (
       <div className={styles.container}>
@@ -129,13 +136,5 @@ class App extends Component {
     );
   }
 }
-
-// function pad0(value) {
-//   let result = value.toString();
-//   if (result.length < 2) {
-//     result = `0 + ${result}`;
-//   }
-//   return result;
-// }
 
 export default App;

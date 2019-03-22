@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "../components/Button";
 import ResultList from "../components/ResultList";
+import Stopwatch from "../components/Stopwatch";
 import styles from "./App.css";
 
 class App extends Component {
@@ -154,7 +155,7 @@ class App extends Component {
         <Button text={"Start"} handleClick={this.start} />
         <Button text={"Pause"} handleClick={this.pause} />
         <Button text={"Stop"} handleClick={this.stop} />
-        <div>{this.format()}</div>
+        <Stopwatch timeDisplay={this.format} />
         <Button text={"Result"} handleClick={this.addResult} />
         <Button text={"Clear"} handleClick={this.clearResults} />
         <ResultList results={this.state.results} />

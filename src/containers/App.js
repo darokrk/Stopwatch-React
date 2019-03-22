@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "../components/Button";
+import ResultList from "../components/ResultList";
 import styles from "./App.css";
-import { runInThisContext } from "vm";
 
 class App extends Component {
   constructor(props) {
@@ -149,8 +149,9 @@ class App extends Component {
         <Button text={"Pause"} handleClick={this.pause} />
         <Button text={"Stop"} handleClick={this.stop} />
         <div>{this.format()}</div>
-        <Button text={"Result"} />
+        <Button text={"Result"} handleClick={this.addResult} />
         <Button text={"Clear"} />
+        <ResultList results={this.state.results} />
       </div>
     );
   }

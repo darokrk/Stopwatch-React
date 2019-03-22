@@ -23,7 +23,7 @@ class App extends Component {
     this.calculate = this.calculate.bind(this);
     this.pause = this.pause.bind(this);
     this.stop = this.stop.bind(this);
-    this.result = this.result.bind(this);
+    this.addResult = this.addResult.bind(this);
     this.clear = this.clear.bind(this);
     this.pad0 = this.pad0.bind(this);
   }
@@ -131,6 +131,14 @@ class App extends Component {
         seconds: 0,
         milliseconds: 0
       }
+    });
+  }
+
+  addResult() {
+    let data = this.state.results;
+    let dataEl = this.format(this.state.times);
+    this.setState({
+      results: [...data, dataEl]
     });
   }
 

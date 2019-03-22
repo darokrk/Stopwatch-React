@@ -24,7 +24,7 @@ class App extends Component {
     this.pause = this.pause.bind(this);
     this.stop = this.stop.bind(this);
     this.addResult = this.addResult.bind(this);
-    this.clear = this.clear.bind(this);
+    this.clearResults = this.clearResults.bind(this);
     this.pad0 = this.pad0.bind(this);
   }
 
@@ -142,6 +142,12 @@ class App extends Component {
     });
   }
 
+  clearResults() {
+    this.setState({
+      results: []
+    });
+  }
+
   render() {
     return (
       <div className={styles.container}>
@@ -150,7 +156,7 @@ class App extends Component {
         <Button text={"Stop"} handleClick={this.stop} />
         <div>{this.format()}</div>
         <Button text={"Result"} handleClick={this.addResult} />
-        <Button text={"Clear"} />
+        <Button text={"Clear"} handleClick={this.clearResults} />
         <ResultList results={this.state.results} />
       </div>
     );

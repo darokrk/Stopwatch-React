@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #555555;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   color: #fff;
+  background: url('../images/daniele-levis-pelusi-672107-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
+  display: flex;
   text-align: center;
-  margin: 170px auto;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
 }

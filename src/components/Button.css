@@ -1,9 +1,30 @@
 .button {
-  margin: 10px;
-  padding: 10px;
-  font-size: 35px;
+  max-height: 55px;
+  margin: 0.6rem;
+  padding: 0.6rem;
+  font-size: 2.2rem;
   font-family: inherit;
-  color: inherit;
   border-radius: 10%;
   background: inherit;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right,
+    #FC7233,
+    #FC7233 50%,
+    #fff 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.button:hover {
+  transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+  background-position: 0%;
+}
+
+.button:focus {
+  outline: none;
+  border-bottom: 1px solid #FC7233;
 }

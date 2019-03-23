@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Button from "../components/Button";
-import ResultList from "../components/ResultList";
-import Stopwatch from "../components/Stopwatch";
+import Button from "../components/Button/Button";
+import ResultList from "../components/ResultList/ResultList";
+import Stopwatch from "../components/Stopwatch/Stopwatch";
 import styles from "./App.css";
 
 class App extends Component {

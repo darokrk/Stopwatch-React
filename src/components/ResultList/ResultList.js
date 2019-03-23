@@ -1,5 +1,5 @@
 import React from "react";
-import ListElement from "./ListElement";
+import ListElement from "../ListElement/ListElement";
 import styles from "./ResultList.css";
 
 const ResultList = props => {

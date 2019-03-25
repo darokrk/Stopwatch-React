@@ -151,19 +151,17 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className={styles.container}>
-          <div>
-            <Button text={"Start"} handleClick={this.start} />
-            <Button text={"Pause"} handleClick={this.pause} />
-            <Button text={"Stop"} handleClick={this.stop} />
-            <Stopwatch timeDisplay={this.format} />
-            <Button text={"Result"} handleClick={this.addResult} />
-            <Button text={"Clear"} handleClick={this.clearResults} />
-          </div>
-          <ResultList results={this.state.results} />
+      <div className={styles.container}>
+        <div>
+          <Button text={"Start"} handleClick={this.start} />
+          <Button text={"Pause"} handleClick={this.pause} />
+          <Button text={"Stop"} handleClick={this.stop} />
+          <Stopwatch timeDisplay={this.format} />
+          <Button text={"Result"} handleClick={this.addResult} />
+          <Button text={"Clear"} handleClick={this.clearResults} />
         </div>
-      </React.Fragment>
+        <ResultList results={this.state.results} />
+      </div>
     );
   }
 }

@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp src build",
     "init:files": "touch README.md src/index.html src/index.js",
@@ -22,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/darokrk/Stopwatch-React/issues"
   },
-  "homepage": "https://github.com/darokrk/Stopwatch-React#readme",
+  "homepage": "https://darokrk.github.io/Stopwatch-React/",
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
@@ -30,6 +32,7 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "img-loader": "^3.0.1",

@@ -10,11 +10,9 @@
   border: none;
   cursor: pointer;
   transition: 0.5s;
-  display: inline;
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-image: linear-gradient(to right,
     #FC7233,
     #FC7233 50%,

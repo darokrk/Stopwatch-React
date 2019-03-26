@@ -10,6 +10,11 @@
   border: none;
   cursor: pointer;
   transition: 0.5s;
+  display: inline;
+}
+
+.button>span {
+  display: inline;
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21,7 +26,7 @@
   background-position: 100%;
 }
 
-.button:hover {
+.button:hover>span {
   transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
   background-position: 0%;
 }
